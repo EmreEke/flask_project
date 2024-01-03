@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class="weather-info">
+    <h1>{{ weather.city }}, {{ weather.country }}</h1>
+    <p>{{ weather.description }}</p>
+    <p>{{ weather.temperature }}°C</p>
+</div>
+{% endblock body %}

@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h1>Sorular</h1>
+<hr>
+<form method="POST" action="/quiz">
+    <h4>{{ questions[0]['question_text'] }}</h4>
+    <input type="radio" name="{{ questions[0]['id'] }}" value="0"> {{ questions[0]['option1'] }}<br>
+    <input type="radio" name="{{ questions[0]['id'] }}" value="1"> {{ questions[0]['option2'] }}<br>
+    <input type="radio" name="{{ questions[0]['id'] }}" value="2"> {{ questions[0]['option3'] }}<br>
+    <input type="radio" name="{{ questions[0]['id'] }}" value="3"> {{ questions[0]['option4'] }}<br><br>
+    
+    <input type="hidden" name="id" value="{{ questions[0]['id'] }}">
+    <input type="submit" value="Submit" class="btn btn-dark">
+</form>
+
+
+{% endblock body %}
